@@ -1,7 +1,11 @@
-import "./App.css";
+import { AppNavigation } from "./components/navigation";
 
 function App() {
-  return <>This is the entry point</>;
+  return (
+    <>
+      <AppNavigation />
+    </>
+  );
 }
 
 export default App;
