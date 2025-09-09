@@ -27,4 +27,4 @@ export default {
       },
     },
   },
-} satisfies import('tailwindcss/types/config').Config;
+};
