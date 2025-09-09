@@ -1,5 +1,4 @@
 import Testimony from "../../components/testimonyCard/Testimony";
-
 export interface Author {
   name: string;
   role: string;

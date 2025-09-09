@@ -1,4 +1,16 @@
-const HeaderSection = () => {
+interface Episode {
+  id: string;
+  title: string;
+  description: string;
+  duration: string;
+  currentTime: string;
+  episodeNumber: string;
+  lengthInMinutes: number;
+  tags: string[];
+  image: string;
+}
+
+const HeaderSection = ({ episodeNumber }: Episode) => {
   return (
     <section id="hero" className="relative overflow-hidden py-20 lg:py-32">
       <div className="absolute inset-0 bg-gradient-to-br from-violet-600/20 via-fuchsia-500/10 to-orange-500/20"></div>
@@ -6,7 +18,9 @@ const HeaderSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full glass-surface border border-white/20 mb-8">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-            <span className="text-sm font-medium">Now Live • Episode 42</span>
+            <span className="text-sm font-medium">
+              Now Live • Episode {episodeNumber}
+            </span>
           </div>
 
           <h1 className="text-5xl lg:text-7xl font-display font-bold tracking-tight leading-tight mb-6">

@@ -6,6 +6,7 @@ import StatisticsSection from "./StatisticsSection";
 import AboutSection from "./AboutSection";
 import NewsLetterSection from "./NewsLetterSection";
 import TestimoniesSection from "./TestimoniesSection";
+import ContactSection from "./ContactSection";
 
 export {
     HomePage,
@@ -15,5 +16,6 @@ export {
     StatisticsSection,
     AboutSection,
     NewsLetterSection,
-    TestimoniesSection 
+    TestimoniesSection,
+    ContactSection
     }
