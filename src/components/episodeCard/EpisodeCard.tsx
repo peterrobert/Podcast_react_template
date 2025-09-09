@@ -1,36 +1,55 @@
-const EpisodeCard = () => {
+export interface Episode {
+  title: string;
+  description: string;
+  duration: string;
+  episodeNumber: string;
+  tags: string[];
+  image: string;
+}
+
+const EpisodeCard = ({
+  title,
+  description,
+  duration,
+  episodeNumber,
+  tags,
+  image,
+}: Episode) => {
   return (
     <>
       <div className="glass-surface p-6 rounded-2xl border border-white/20 hover:bg-white/10 transition-all group">
         <div className="flex items-center justify-between mb-4">
           <span className="glass-surface px-3 py-1 rounded-full text-xs font-medium border border-white/20">
-            EP41
+            {episodeNumber}
           </span>
-          <span className="text-xs text-slate-400">42 min</span>
+          <span className="text-xs text-slate-400">{duration} min</span>
         </div>
 
         <img
           className="w-full aspect-video rounded-xl mb-4 object-cover"
-          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7d594c33f0-2e9edb4a58588f18e11c.png"
+          src={image}
           alt="creative workspace with design tools and sketches, warm lighting"
         />
 
         <h3 className="text-lg font-bold mb-2 group-hover:text-violet-300 transition-colors">
-          Design Systems That Scale
+          {title}
         </h3>
 
         <p className="text-slate-400 text-sm mb-4 line-clamp-2">
-          Building consistent experiences across teams with Emma Rodriguez from
-          Figma.
+          {description}
         </p>
 
         <div className="flex flex-wrap gap-2 mb-4">
-          <span className="glass-surface px-2 py-1 rounded-full text-xs border border-white/20">
-            Design
-          </span>
-          <span className="glass-surface px-2 py-1 rounded-full text-xs border border-white/20">
-            Systems
-          </span>
+          {tags.map((value) => {
+            return (
+              <span
+                className="glass-surface px-2 py-1 rounded-full text-xs border border-white/20"
+                key={value}
+              >
+                value
+              </span>
+            );
+          })}
         </div>
 
         <div className="flex items-center justify-between">
