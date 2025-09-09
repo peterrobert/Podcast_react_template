@@ -46,7 +46,7 @@ const EpisodeCard = ({
                 className="glass-surface px-2 py-1 rounded-full text-xs border border-white/20"
                 key={value}
               >
-                value
+                {value}
               </span>
             );
           })}

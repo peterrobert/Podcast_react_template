@@ -1,9 +1,23 @@
 import { FeaturedEpisode } from ".";
 import EpisodeCard from "../../components/episodeCard/EpisodeCard.tsx";
 // --- Dummy Data ----
-import { featuredEpisode } from "../../../dummyData.ts";
+import { featuredEpisode, episodes } from "../../../dummyData.ts";
+import { Fragment } from "react/jsx-runtime";
 
 const HomePage = () => {
+  // ---- DISPLAY EPISODE CARD
+  const displayEpisodes = () => {
+    const results = episodes.map((value) => {
+      return (
+        <Fragment key={value.id}>
+          <EpisodeCard {...value} />
+        </Fragment>
+      );
+    });
+
+    return results;
+  };
+
   return (
     <>
       {/* <!-- Header Section --> */}
@@ -100,7 +114,7 @@ const HomePage = () => {
           </div>
           {/* -- Episode Cards Display -- */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <EpisodeCard />
+            {displayEpisodes()}
           </div>
         </div>
       </section>
