@@ -117,6 +117,40 @@ const episodes = [
   },
 ];
 
+const testimonies = [
+  {
+    "id": "t1",
+    "rating": 5,
+    "quote": "EchoWave completely changed how I think about career growth. The portfolio episode literally helped me land my dream job at a unicorn startup.",
+    "author": {
+      "name": "Sarah Chen",
+      "role": "Product Designer",
+      "avatar": "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg"
+    }
+  },
+  {
+    "id": "t2",
+    "rating": 3,
+    "quote": "I’ve listened to dozens of podcasts, but this is the only one I keep coming back to. Every episode gives me something practical I can apply immediately.",
+    "author": {
+      "name": "David Kim",
+      "role": "Frontend Engineer",
+      "avatar": "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg"
+    }
+  },
+  {
+    "id": "t3",
+    "rating": 4,
+    "quote": "What I love most is the mix of storytelling and actionable advice. It feels like having a mentor on demand.",
+    "author": {
+      "name": "Emma Rodriguez",
+      "role": "UX Researcher",
+      "avatar": "https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg"
+    }
+  }
+]
 
 
-export {featuredEpisode, episodes}
+
+
+export {featuredEpisode, episodes, testimonies}

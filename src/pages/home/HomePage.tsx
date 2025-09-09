@@ -4,9 +4,11 @@ import {
   LatestEpisode,
   StatisticsSection,
   AboutSection,
+  NewsLetterSection,
+  TestimoniesSection,
 } from ".";
 // --- Dummy Data ----
-import { featuredEpisode, episodes } from "../../../dummyData.ts";
+import { featuredEpisode, episodes, testimonies } from "../../../dummyData.ts";
 
 const HomePage = () => {
   return (
@@ -16,6 +18,8 @@ const HomePage = () => {
       <LatestEpisode data={[...episodes]} />
       <StatisticsSection />
       <AboutSection />
+      <NewsLetterSection />
+      <TestimoniesSection data={[...testimonies]} />
     </>
   );
 };
