@@ -2,18 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import FeaturedEpisode from "../FeaturedEpisode";
 import "@testing-library/jest-dom";
-
-interface Episode {
-  id: string;
-  title: string;
-  description: string;
-  duration: string;
-  currentTime: string;
-  episodeNumber: string;
-  lengthInMinutes: number;
-  tags: string[];
-  image: string;
-}
+import type { Episode } from "../../../types";
 
 const mockEpisode: Episode = {
   id: "1",

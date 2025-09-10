@@ -1,3 +1,3 @@
 import AppPlayer from "./AppPlayer";
 
-export default AppPlayer
+export  {AppPlayer}

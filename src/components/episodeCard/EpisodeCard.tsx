@@ -1,11 +1,4 @@
-export interface Episode {
-  title: string;
-  description: string;
-  duration: string;
-  episodeNumber: string;
-  tags: string[];
-  image: string;
-}
+import type { Episode } from "../../types";
 
 const EpisodeCard = ({
   title,

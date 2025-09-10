@@ -1,15 +1,6 @@
 import { Fragment } from "react/jsx-runtime";
 import EpisodeCard from "../../components/episodeCard";
-
-export interface Episode {
-  id: string;
-  title: string;
-  description: string;
-  duration: string;
-  episodeNumber: string;
-  tags: string[];
-  image: string;
-}
+import type { Episode } from "../../types";
 
 const LatestEpisode = ({ data = [] }: { data: Episode[] }) => {
   const displayEpisodes = () => {

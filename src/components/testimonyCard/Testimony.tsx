@@ -1,15 +1,4 @@
-export interface Author {
-  name: string;
-  role: string;
-  avatar: string;
-}
-
-export interface Testimonial {
-  id: string;
-  rating: number;
-  quote: string;
-  author: Author;
-}
+import type { Testimonial } from "../../types";
 
 const Testimony = ({ id, rating, quote, author }: Testimonial) => {
   return (

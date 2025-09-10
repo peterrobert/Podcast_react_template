@@ -1,16 +1,5 @@
 import Testimony from "../../components/testimonyCard/Testimony";
-export interface Author {
-  name: string;
-  role: string;
-  avatar: string;
-}
-
-export interface Testimonial {
-  id: string;
-  rating: number;
-  quote: string;
-  author: Author;
-}
+import type { Testimonial } from "../../types";
 
 const TestimoniesSection = ({ data = [] }: { data: Testimonial[] }) => {
   return (
