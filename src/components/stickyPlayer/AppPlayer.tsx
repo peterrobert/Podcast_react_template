@@ -1,8 +1,13 @@
-const AppPlayer = () => {
+type AppPlayerProps = { showPlayer: boolean };
+
+const AppPlayer = ({ showPlayer }: AppPlayerProps) => {
+  if (!showPlayer) return null;
+
   return (
     <div
       id="mini-player"
-      className="fixed bottom-0 left-0 right-0 z-40 glass-surface border-t border-white/20 p-4 transform translate-y-full transition-transform duration-300"
+      className={`fixed bottom-0 left-0 right-0 z-40 glass-surface border-t border-white/20 p-4 transition-transform duration-300
+        ${showPlayer ? "translate-y-0" : "translate-y-full"}`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">

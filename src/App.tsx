@@ -1,16 +1,20 @@
+import { useState } from "react";
 import AppFooter from "./components/footer";
 import { AppNavigation } from "./components/navigation";
 import { AppPlayer } from "./components/stickyPlayer";
-
-import { HomePage } from "./pages/home";
+import { EpisodesPage } from "./pages/episodes";
+// import { HomePage } from "./pages/home";
 
 function App() {
+  const [showPlayer] = useState(true);
+
   return (
     <>
       <AppNavigation />
-      <HomePage />
+      {/* <HomePage /> */}
+      <EpisodesPage />
       <AppFooter />
-      <AppPlayer />
+      <AppPlayer showPlayer={showPlayer} />
     </>
   );
 }
