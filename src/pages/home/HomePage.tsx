@@ -8,7 +8,7 @@ import {
   TestimoniesSection,
   ContactSection,
 } from ".";
-import AppPlayer from "../../components/stickyPlayer.tsx/AppPlayer.tsx";
+
 // Dummy Data
 // TODO: Replace dummy data with API integration
 import { featuredEpisode, episodes, testimonies } from "../../../dummyData.ts";
@@ -24,7 +24,6 @@ const HomePage = () => {
       <NewsLetterSection />
       <TestimoniesSection data={testimonies} />
       <ContactSection />
-      <AppPlayer />
     </>
   );
 };

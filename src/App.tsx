@@ -1,5 +1,7 @@
 import AppFooter from "./components/footer";
 import { AppNavigation } from "./components/navigation";
+import { AppPlayer } from "./components/stickyPlayer";
+
 import { HomePage } from "./pages/home";
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
       <AppNavigation />
       <HomePage />
       <AppFooter />
+      <AppPlayer />
     </>
   );
 }
