@@ -3,7 +3,9 @@ import AppFooter from "./components/footer";
 import { AppNavigation } from "./components/navigation";
 import { AppPlayer } from "./components/stickyPlayer";
 import { EpisodesPage } from "./pages/episodes";
-// import { HomePage } from "./pages/home";
+import { Routes, Route } from "react-router-dom";
+import { HomePage } from "./pages/home";
+
 const sampleEpisode = {
   title: "The Portfolio That Hired You",
   podcast: "EchoWave",
@@ -18,8 +20,10 @@ function App() {
   return (
     <>
       <AppNavigation />
-      {/* <HomePage /> */}
-      <EpisodesPage />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/episodes" element={<EpisodesPage />} />
+      </Routes>
       <AppFooter />
       <AppPlayer showPlayer={showPlayer} episode={sampleEpisode} />
     </>

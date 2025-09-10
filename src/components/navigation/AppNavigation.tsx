@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const AppNavigation = () => {
   return (
     <nav
@@ -18,12 +20,18 @@ const AppNavigation = () => {
 
           {/* <!-- Desktop Navigation --> */}
           <div className="hidden md:flex items-center space-x-8">
-            <span className="text-white hover:text-violet-300 transition-colors font-medium cursor-pointer">
+            <Link
+              to={"/"}
+              className="text-white hover:text-violet-300 transition-colors font-medium cursor-pointer"
+            >
               Home
-            </span>
-            <span className="text-white hover:text-violet-300 transition-colors font-medium cursor-pointer">
+            </Link>
+            <Link
+              to={"/episodes"}
+              className="text-white hover:text-violet-300 transition-colors font-medium cursor-pointer"
+            >
               Episodes
-            </span>
+            </Link>
             <span className="text-white hover:text-violet-300 transition-colors font-medium cursor-pointer">
               About
             </span>
