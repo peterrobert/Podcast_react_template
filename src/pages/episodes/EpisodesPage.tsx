@@ -1,4 +1,4 @@
-import { EpisodesSection, HeaderSection } from ".";
+import { EpisodesSection, HeaderSection, TrendingSection } from ".";
 import { episodes } from "../../../dummyData";
 
 const EpisodesPage = () => {
@@ -6,6 +6,7 @@ const EpisodesPage = () => {
     <>
       <HeaderSection />
       <EpisodesSection data={episodes} />
+      <TrendingSection />
     </>
   );
 };

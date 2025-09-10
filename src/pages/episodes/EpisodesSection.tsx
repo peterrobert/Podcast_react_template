@@ -6,9 +6,9 @@ const EpisodesSection = ({ data = [] }: { data: Episode[] }) => {
   const displayEpisodes = () => {
     if (data.length === 0)
       return (
-        <section id="empty-state" className="py-20 hidden">
+        <section id="empty-state" className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-2xl mx-auto text-center">
+            <div className="max-w-2xl mx-auto text-center justify-center">
               <div className="mb-8">
                 <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-r from-violet-600/20 to-orange-500/20 rounded-full flex items-center justify-center">
                   <i className="fas fa-search text-4xl text-slate-400"></i>
