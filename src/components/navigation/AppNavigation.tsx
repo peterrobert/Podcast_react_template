@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const AppNavigation = () => {
   return (
@@ -20,24 +20,54 @@ const AppNavigation = () => {
 
           {/* <!-- Desktop Navigation --> */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link
+            <NavLink
               to={"/"}
-              className="text-white hover:text-violet-300 transition-colors font-medium cursor-pointer"
+              className={({ isActive }) =>
+                `group relative flex flex-col items-center ${
+                  isActive &&
+                  `text-purple-500 hover:text-violet-300 transition-colors font-medium cursor-pointer hover:underline`
+                }`
+              }
             >
               Home
-            </Link>
-            <Link
+              <span className="absolute -bottom-2 w-2 h-2 bg-violet-600 rounded-full opacity-0 group-aria-[current=page]:opacity-100"></span>
+            </NavLink>
+            <NavLink
               to={"/episodes"}
-              className="text-white hover:text-violet-300 transition-colors font-medium cursor-pointer"
+              className={({ isActive }) =>
+                `group relative flex flex-col items-center ${
+                  isActive &&
+                  `text-purple-500 hover:text-violet-300 transition-colors font-medium cursor-pointer hover:underline`
+                }`
+              }
             >
               Episodes
-            </Link>
-            <span className="text-white hover:text-violet-300 transition-colors font-medium cursor-pointer">
+              <span className="absolute -bottom-2 w-2 h-2 bg-violet-600 rounded-full opacity-0 group-aria-[current=page]:opacity-100"></span>
+            </NavLink>
+            <NavLink
+              to={"/about"}
+              className={({ isActive }) =>
+                `group relative flex flex-col items-center ${
+                  isActive &&
+                  `text-purple-500  hover:text-violet-300 transition-colors font-medium cursor-pointer hover:underline`
+                }`
+              }
+            >
               About
-            </span>
-            <span className="text-white hover:text-violet-300 transition-colors font-medium cursor-pointer">
+              <span className="absolute -bottom-2 w-2 h-2 bg-violet-600 rounded-full opacity-0 group-aria-[current=page]:opacity-100"></span>
+            </NavLink>
+            <NavLink
+              to={"/contact"}
+              className={({ isActive }) =>
+                `group relative flex flex-col items-center ${
+                  isActive &&
+                  `text-purple-500 hover:text-violet-300 transition-colors font-medium cursor-pointer hover:underline`
+                }`
+              }
+            >
               Contact
-            </span>
+              <span className="absolute -bottom-2 w-2 h-2 bg-violet-600 rounded-full opacity-0 group-aria-[current=page]:opacity-100"></span>
+            </NavLink>
           </div>
 
           {/* <!-- Actions --> */}

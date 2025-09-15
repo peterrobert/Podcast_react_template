@@ -5,6 +5,8 @@ import { AppPlayer } from "./components/stickyPlayer";
 import { EpisodesPage } from "./pages/episodes";
 import { Routes, Route } from "react-router-dom";
 import { HomePage } from "./pages/home";
+import { AboutPage } from "./pages/about";
+import { ContactPage } from "./pages/contact";
 
 const sampleEpisode = {
   title: "The Portfolio That Hired You",
@@ -23,6 +25,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/episodes" element={<EpisodesPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <AppFooter />
       <AppPlayer showPlayer={showPlayer} episode={sampleEpisode} />
